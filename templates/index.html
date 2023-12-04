@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Data</title>
+</head>
+<body>
+    <h1>Disease Data</h1>
+    <ul>
+        {% for disease, words in disease_data.items() %}
+            <li>{{ disease }}: {{ ', '.join(words) }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
