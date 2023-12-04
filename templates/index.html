@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Disease Data</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Disease Data</h1>
-    <ul>
-        {% for disease, words in disease_data.items() %}
-            <li>{{ disease }}: {{ ', '.join(words) }}</li>
-        {% endfor %}
-    </ul>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Disease Dataset Analysis</h1>
+        <br>
+        <h6 class="mb-3">Diseases and their most commonly occuring descriptors:</h6>
+        <ul class="list-group">
+            {% for disease, words in disease_data.items() %}
+            
+            <li class="list-group-item">
+                <strong><a href="https://en.wikipedia.org/wiki/{{ disease|replace(' ', '_') }}" target="_blank">{{ disease|title }}</a></strong>: {% for word in words %}{{ word|title }}{% if not loop.last %}, {% endif %}{% endfor %}
+            </li>
+            
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Bootstrap dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
