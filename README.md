@@ -20,3 +20,7 @@ the MapReduce output and uses Bootstrap to visualise it as a list for clients.
 ### Dashboard:
 
 <img width="1325" alt="image" src="https://github.com/jamesclackett/Disease-Analysis-Dashboard/assets/55019466/9c8f2b82-6f25-48c4-803e-bcd85b3164b9">
+
+---
+
+See Report.pdf for more information.
