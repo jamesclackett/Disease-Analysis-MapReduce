@@ -1,7 +1,7 @@
 # MapReduce Disease Analysis
 
 ---
-A parallelised system that runs Map Reduce jobs on a disease dataset (https://www.kaggle.com/datasets/niyarrbarman/symptom2disease). 
+A parallelised system that runs Map Reduce jobs on a disease dataset (https://www.kaggle.com/datasets/niyarrbarman/symptom2disease) and hosts the results. 
 
 The disease dataset has been copied and hosted privately on an Amazon S3 Bucket, along with copies of the Java MapReduce code.
 The dataset contains 24 different diseases, and for each there are 50 textual (English only) descriptions of patient symptoms. This results in 1200 unique datapoints.
